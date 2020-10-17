@@ -1,0 +1,80 @@
+<div class="first">
+    <mat-toolbar color="primary" class="toolbar">
+        People Data Labs API
+    </mat-toolbar>
+    <br />
+    <div class="second">
+          <mat-card>
+            <label>User</label>&nbsp;&nbsp;
+            <input type="text" placeholder="Enter User name" [(ngModel)]="user" class="user">
+            
+        </mat-card> 
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="elementone">
+                <form [formGroup]="ngForm" (ngSubmit)="profileSubmit();clicked=true">
+                    <p>
+                        <label>Upload CSV File</label>&nbsp;&nbsp;
+                        <input type="file" accept=".csv" name="file" (change)="onChangeProfile($event.target.files)"
+                            formControlName="file" class="upload" required>
+
+                    </p>
+
+                    <p>
+                        <label>File Name</label>&nbsp;&nbsp;
+                        <input type="text" placeholder="Output File Name"name="profileFile" [value]=ngForm.value.profileFile formControlName="profileFile" class="filename"
+                            readonly>
+                    </p>
+                    <p>
+                        <button type="submit" [disabled]="clicked" mat-button class="submitButton">Submit</button>
+                    </p>
+                </form>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="elementone">
+                <form [formGroup]="ngForm1" (ngSubmit)="companySubmit();clicked1=true">
+                    <p>
+                        <label>Upload CSV File</label>&nbsp;&nbsp;
+                        <input type="file" accept=".csv" name="file" (change)="onChangeCompany($event.target.files)"
+                            formControlName="file" class="upload" required>
+
+                    </p>
+
+                    <p>
+                        <label>File Name</label>&nbsp;&nbsp;
+                        <input type="text" placeholder="Output File Name" name="companyFile" [value]=ngForm1.value.companyFile formControlName="companyFile" class="filename"
+                            readonly>
+                    </p>
+                    <p>
+                        <button type="submit" [disabled]="clicked1" mat-button class="submitButton">Submit</button>
+                    </p>
+                </form>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="elementone">
+                <form [formGroup]="ngForm2" (ngSubmit)="titleSubmit();clicked2=true">
+                    <p>
+                        <label>Upload CSV File</label>&nbsp;&nbsp;
+                        <input type="file" accept=".csv" name="file" (change)="onChangeTitle($event.target.files)"
+                            formControlName="file" class="upload" required>
+
+                    </p>
+
+                    <p>
+                        <label>File Name</label>&nbsp;&nbsp;
+                        <input type="text" placeholder="Output File Name" name="titleFile" [value]=ngForm2.value.titleFile formControlName="titleFile" class="filename"
+                            readonly>
+                    </p>
+                    <p>
+                        <button type="submit" [disabled]="clicked2" mat-button class="submitButton">Submit</button>
+                    </p>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+    
+</div>
