@@ -1,0 +1,77 @@
+.first{
+/* background:lightblue; */
+/* background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url('../../assets/bg.png');
+text-align: center;
+    display: block; */
+    background: lightsteelblue;
+    font-family: 'Ubuntu', sans-serif;
+    height: 630px;
+}
+.second{
+    text-align: center;
+}
+.toolbar{
+    background: black;
+    color: white;
+    zoom: 2;
+    text-align: center;
+    display: block;
+}
+
+.user{
+    border:none;
+    padding:15px;
+    border-radius: 10px;
+    box-shadow: 2px 3px black;
+}
+.element{
+    display: flex;
+    justify-content: center;
+}
+.elementone{
+   
+    border-radius: 10px;
+    box-shadow: 2px 3px grey;
+    padding: 10px;
+    background: linear-gradient(45deg,black,transparent);
+    color:white;
+}
+.upload{
+    padding: 10px;
+    color:black;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 1px 2px black;
+}
+.filename{
+    border:none;
+    padding:15px;
+    border-radius: 10px;
+    box-shadow: 2px 3px black;
+width:100%;
+color:black;
+cursor:not-allowed;
+}
+
+.submitButton{
+    border:none;
+    background: tomato;
+    color:white;
+    padding:8px;
+    border-radius: 10px;
+    float:right;
+    box-shadow: 2px 3px black;
+}
+.submitButton:disabled{
+    background: black;
+    color:grey;
+    border:none;
+    padding:8px;
+    border-radius: 10px;
+    float:right;
+    box-shadow: 2px 3px grey;
+    cursor:not-allowed
+}
