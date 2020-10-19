@@ -27,12 +27,18 @@ text-align: center;
     border-radius: 10px;
     box-shadow: 2px 3px black;
 }
+<<<<<<< HEAD
 .element{
     display: flex;
     justify-content: center;
 }
 .elementone{
    
+=======
+.elementone{
+    display: flex;
+    justify-content: center;
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
     border-radius: 10px;
     box-shadow: 2px 3px grey;
     padding: 10px;

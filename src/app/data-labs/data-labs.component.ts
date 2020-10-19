@@ -22,10 +22,17 @@ export class DataLabsComponent implements OnInit {
   clicked2 = false;
   public profileData: Profile[] = [];
   companyFile: any;
+<<<<<<< HEAD
   //public companyData: Company[] = [];
   titleFile: any;
   //response: any[];
  // public titleData: Title[] = [];
+=======
+  public companyData: Company[] = [];
+  titleFile: any;
+  //response: any[];
+  public titleData: Title[] = [];
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
   responseProfile: any;
   responseCompany: any;
   responseTitle: any;
@@ -75,6 +82,7 @@ export class DataLabsComponent implements OnInit {
         for (let index = 1; index < csvToRowArray.length - 1; index++) {
           let row = csvToRowArray[index].split(",");
           //  console.log("row",row);
+<<<<<<< HEAD
           this.profileData.push(new Profile(row[0], row[1], row[2], row[3],row[4],row[6],row[7],row[8],row[9]));
         }
         console.log(this.profileData);
@@ -183,6 +191,8 @@ export class DataLabsComponent implements OnInit {
         for (let index = 1; index < csvToRowArray.length - 1; index++) {
           let row = csvToRowArray[index].split(",");
           //  console.log("row",row);
+=======
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
           this.profileData.push(new Profile(row[0], row[1], row[2], row[3]));
         }
         console.log(this.profileData);
@@ -281,7 +291,11 @@ export class DataLabsComponent implements OnInit {
         Date: this.date,
         User: this.user
       }*/
+<<<<<<< HEAD
    /*   var obj = {
+=======
+      var obj = {
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
         FirstName: 'John',
         LastName: 'Smith',
         FullName:'John Smith',
@@ -308,7 +322,24 @@ export class DataLabsComponent implements OnInit {
       }
       this.objArray.push(obj);
   //  })
+<<<<<<< HEAD
     
+=======
+    /* for (var i = 0; i < this.objArray.length; i++) {
+      var arrClass = this.objArray[i].Classes.split(',');
+      delete this.objArray[i].Classes
+      arrClass.forEach(function (ele, index) {
+        var keyName = 'class' + (index + 1);
+        this.objArray[i][keyName] = ele;
+      });
+    }
+    jsonexport(this.objArray, function (err, csv) {
+      if (err) return console.log(err);
+      console.log(csv); */
+      /* fs.writeFile('test.csv', csv, function (err) {
+        console.log(err);
+      }); */
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
       const replacer = (key, value) => value === null ? '' : value; // specify how you want to handle null values here
     const header = Object.keys(this.objArray[0]);
     let csv = this.objArray.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','));
@@ -395,6 +426,7 @@ export class DataLabsComponent implements OnInit {
 
     var blob = new Blob([csvArray], {type: 'text/csv' })
     saveAs(blob, "PeopleDataLabs.csv");
+<<<<<<< HEAD
   }*/
 
 export class Profile {
@@ -421,6 +453,13 @@ export class Profile {
 
 }
 /* export class Profile {
+=======
+  }
+
+}
+
+export class Profile {
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
   FirstName: String;
   LastName: String;
   FullName: String;
@@ -455,4 +494,8 @@ export class Title {
     this.State = State;
     this.Country = Country;
   }
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150

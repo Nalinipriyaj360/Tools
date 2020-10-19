@@ -5,7 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataServiceService {
+<<<<<<< HEAD
   
+=======
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
 
 params:any;
   //response: any;
@@ -38,6 +41,7 @@ params:any;
   constructor(public http: HttpClient) {
 
   }
+<<<<<<< HEAD
   getPeopleDataLabsProfile(profileData){
     console.log("profile data",profileData);
     this.interval = setInterval(() => {
@@ -94,6 +98,11 @@ params:any;
   }
 }
  /* getPeopleDataLabsProfile(profileData) {
+=======
+  
+
+  getPeopleDataLabsProfile(profileData) {
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
     console.log("profile data",profileData);
     this.interval = setInterval(() => {
       this.currentItem = profileData[this.pointer];
@@ -116,7 +125,10 @@ params:any;
     this.pointer=0;
     return this.resArrayProfile;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
   getPeopleDataLabsCompany(companyData) {
     console.log("company data",companyData);
     this.interval = setInterval(() => {
@@ -164,7 +176,11 @@ params:any;
     return this.resArrayTitle;
   }
 }
+<<<<<<< HEAD
    for(var i=0;i<profileData.length;i++){
+=======
+  /*   for(var i=0;i<profileData.length;i++){
+>>>>>>> c1debfa7ff77dd83e9c5a69b64b7985715ebc150
     this.SQL_QUERY = `SELECT * FROM person WHERE first_name='${profileData[i]?.FirstName}' AND last_name='${profileData[i]?.LastName}'AND full_name='${profileData[i]?.FullName}' AND job_company_name='${profileData[i]?.Company}';`
    console.log("sql",this.SQL_QUERY);
     this.params = new HttpParams()
